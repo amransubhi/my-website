@@ -2,9 +2,26 @@
     <a href='<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW0vshcOmS9xVe1XKPFL75dBMQ-YtuGytfEWKP0JlxRPiUz6JSj42LPWk2nlNAx-WJos2CKN25EutEuf9luoi82eZpavrL2IKkI8IqCP1J8XVb4s-fCwwCUuyWquYk1INgTajedpHoO4k3I4KtqOR9tjWGgSyVYlEi0cK5D8rWhvWkSnArxBOy02ptYQ/s4800/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="200" data-original-height="4800" data-original-width="3200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW0vshcOmS9xVe1XKPFL75dBMQ-YtuGytfEWKP0JlxRPiUz6JSj42LPWk2nlNAx-WJos2CKN25EutEuf9luoi82eZpavrL2IKkI8IqCP1J8XVb4s-fCwwCUuyWquYk1INgTajedpHoO4k3I4KtqOR9tjWGgSyVYlEi0cK5D8rWhvWkSnArxBOy02ptYQ/s200/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png"/></a></div'><img src="image.jpg" /></a>
 </div>
 
-<div id="pro-3d-root">
+<div id="pro-3d-root" class="dark-theme">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Rudaw&family=Tajawal:wght@400;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+
+  /* --- VARIABLES --- */
+  :root {
+    --bg-color: #f0f2f5;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --text-color: #1e293b;
+    --header-bg: rgba(255, 255, 255, 0.5);
+    --star-color: #3b82f6;
+  }
+
+  .dark-theme {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-color: #f8fafc;
+    --header-bg: rgba(15, 23, 42, 0.6);
+    --star-color: #ffffff;
+  }
 
   #pro-3d-root {
     all: initial;
@@ -12,233 +29,159 @@
     width: 100%;
     min-height: 100vh;
     font-family: 'Tajawal', sans-serif;
-    background: #0f172a !important; /* پاشبنەمایا تاریک بۆ دیاربوونا ئەنیمەیشنی */
-    color: #f8fafc !important;
-    box-sizing: border-box;
-    direction: rtl;
-    padding-bottom: 50px;
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    transition: background 0.5s ease;
     position: relative;
     overflow-x: hidden;
+    direction: rtl;
   }
 
-  /* --- 3D BACKGROUND ANIMATION --- */
+  /* --- NEW STAR ANIMATION --- */
   .bg-animation {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: 0;
     pointer-events: none;
-    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
   }
 
   .star {
     position: absolute;
-    background: white;
+    background: var(--star-color);
     border-radius: 50%;
-    opacity: 0.3;
-    animation: moveStars var(--duration) linear infinite;
+    opacity: 0.5;
+    animation: floatStars var(--duration) ease-in-out infinite;
   }
 
-  @keyframes moveStars {
-    from { transform: translateY(0) translateZ(0); }
-    to { transform: translateY(-100vh) translateZ(500px); opacity: 0; }
+  @keyframes floatStars {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
+    50% { transform: translateY(-100px) scale(1.5); opacity: 0.7; }
+  }
+
+  /* --- DARK/LIGHT TOGGLE --- */
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    cursor: pointer;
+    background: var(--header-bg);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
   }
 
   /* --- UI CONTENT --- */
-  .ui-wrapper { position: relative; z-index: 1; }
-
   .pro-header {
-    background: rgba(30, 41, 59, 0.7) !important;
+    background: var(--header-bg) !important;
     backdrop-filter: blur(15px);
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
-    border-radius: 0 0 50px 50px;
-    margin-bottom: 50px;
+    border-radius: 0 0 40px 40px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    position: relative; z-index: 1;
   }
 
-  .pro-title { font-size: 28px; font-weight: 900; color: #3b82f6 !important; margin: 0; }
-  .pro-subtitle { color: #94a3b8 !important; font-size: 15px; margin-top: 10px; }
+  .pro-title { font-size: 28px; font-weight: 900; color: #3b82f6 !important; }
 
-  .lang-wrapper { margin-top: 25px; }
-  .pro-select {
-    padding: 10px 25px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.1) !important;
-    color: white !important;
-    border: 1px solid rgba(255,255,255,0.2);
-    cursor: pointer;
-  }
+  .card-container { display: flex; justify-content: center; padding: 60px 20px; perspective: 1000px; z-index: 1; position: relative; }
 
-  .card-container { display: flex; justify-content: center; padding: 20px; perspective: 1500px; }
-
-  /* --- 3D CARD ENHANCED --- */
   .card-3d {
-    position: relative;
-    width: 360px;
-    background: rgba(255, 255, 255, 0.05) !important;
+    width: 350px;
+    background: var(--card-bg) !important;
     backdrop-filter: blur(20px);
     border-radius: 30px;
     padding: 30px;
     border: 1px solid rgba(255,255,255,0.1);
     transform-style: preserve-3d;
-    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-  }
-
-  .card-3d:hover {
-    transform: rotateY(-10deg) rotateX(5deg) translateY(-10px);
-    border-color: #3b82f6;
-  }
-
-  .img-wrapper {
-    width: 100%;
-    margin-top: -80px;
-    display: flex;
-    justify-content: center;
-    transform: translateZ(50px);
-  }
-
-  .pro-img {
-    width: 200px;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
-    border-radius: 20px;
     transition: 0.5s;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
   }
 
-  .card-3d:hover .pro-img { transform: scale(1.1) translateZ(30px); }
+  .card-3d:hover { transform: translateY(-10px) rotateX(5deg); }
 
-  .content-box { text-align: center; margin-top: 20px; }
-  .pro-h2 { font-size: 24px; color: #fff !important; margin-bottom: 10px; }
-  .pro-p { color: #3b82f6 !important; font-weight: bold; margin-bottom: 25px; }
-
-  .feat-list { list-style: none; padding: 0; margin-bottom: 30px; text-align: right; }
-  .feat-list li {
-    font-size: 14px;
-    color: #cbd5e1 !important;
-    margin-bottom: 15px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    background: rgba(255,255,255,0.03);
-    padding: 10px;
-    border-radius: 12px;
-  }
-
-  .icon-check { width: 20px; fill: #10b981; flex-shrink: 0; }
+  .img-wrapper { margin-top: -80px; display: flex; justify-content: center; transform: translateZ(50px); }
+  .pro-img { width: 180px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); }
 
   .price-badge {
     background: #3b82f6 !important;
     color: white !important;
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 50px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 900;
-    margin-bottom: 30px;
+    margin: 20px 0;
     display: inline-block;
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
   }
 
-  .btn-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-  .btn-wa-wrapper { grid-column: span 2; }
-
+  .btn-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .btn-wa { grid-column: span 2; background: #25D366 !important; }
   .pro-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px;
-    border-radius: 15px;
-    text-decoration: none;
-    color: white !important;
-    font-weight: bold;
-    transition: 0.3s;
-    background: rgba(255,255,255,0.1);
+    padding: 12px; border-radius: 12px; text-decoration: none; color: white !important;
+    font-weight: bold; text-align: center; transition: 0.3s;
   }
-
-  .pro-btn:hover { transform: translateY(-5px) translateZ(20px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
-
-  .bg-wa { background: #25D366 !important; }
-  .bg-ig { background: linear-gradient(45deg, #f09433, #e1306c, #bc1888) !important; }
+  .bg-ig { background: #e1306c !important; }
   .bg-tg { background: #0088cc !important; }
-  .btn-icon { width: 22px; height: 22px; fill: white; }
-
 </style>
 
 <div class="bg-animation" id="star-field"></div>
 
+<div class="theme-toggle" onclick="toggleTheme()">
+  <span id="theme-icon">🌙</span>
+</div>
+
 <div class="ui-wrapper">
-    <div class="pro-header">
-      <h1 class="pro-title" data-k="header_title">فرۆشگەها ئەلکترۆنی</h1>
-      <p class="pro-subtitle" data-k="header_sub">باشترین بەرهەمێن دیجیتاڵی ب گرەنتی</p>
-      <div class="lang-wrapper">
-        <select class="pro-select" onchange="changeLang(this.value)">
-          <option value="ku">کوردی</option>
-          <option value="ar">عربي</option>
-          <option value="en">English</option>
-        </select>
+  <div class="pro-header">
+    <h1 class="pro-title">فرۆشگەها ئەلکترۆنی</h1>
+    <p style="color: #64748b;">باشترین بەرهەمێن دیجیتاڵی ب گرەنتی</p>
+  </div>
+
+  <div class="card-container">
+    <div class="card-3d">
+      <div class="img-wrapper">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwzXefDGWLNCxrp4ugci8v6PXoKm3c1rmwQKin-rlm2u1WYR6embVoV3XG1VCEb5cPwPUjP_ouuVB1E6T1z3Tjz4yOPoQExFrBov6jYR_5EyOipi4_yj6WmoEhXZC6KBlVq9PKPwpgQ0Zv-iHdAE-yq6IU4PSI_Pgei1mOlI9QtgwdjbNvbkAFV0vXeQ/s320/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png" class="pro-img">
       </div>
-    </div>
-
-    <div class="card-container">
-      <div class="card-3d">
-        <div class="img-wrapper">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwzXefDGWLNCxrp4ugci8v6PXoKm3c1rmwQKin-rlm2u1WYR6embVoV3XG1VCEb5cPwPUjP_ouuVB1E6T1z3Tjz4yOPoQExFrBov6jYR_5EyOipi4_yj6WmoEhXZC6KBlVq9PKPwpgQ0Zv-iHdAE-yq6IU4PSI_Pgei1mOlI9QtgwdjbNvbkAFV0vXeQ/s320/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png" class="pro-img">
-        </div>
-
-        <div class="content-box">
-          <h2 class="pro-h2" data-k="auto_t">Autodesk All Apps</h2>
-          <p class="pro-p" data-k="auto_s">بەشداریا ساڵانە (١ ساڵ)</p>
-
-          <ul class="feat-list">
-            <li><svg class="icon-check" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span data-k="af1">ئشتراك ل سەر ئیمیلێ شەخسی.</span></li>
-            <li><svg class="icon-check" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span data-k="af2">بێی Crack و ڤایرۆس.</span></li>
-          </ul>
-
-          <div class="price-badge" data-k="ap">15,000 IQD</div>
-
-          <div class="btn-container">
-            <div class="btn-wa-wrapper">
-              <a href="https://wa.me/9647500000000" target="_blank" class="pro-btn bg-wa">WhatsApp</a>
-            </div>
-            <a href="https://instagram.com/engineering_with_amran" target="_blank" class="pro-btn bg-ig">Instagram</a>
-            <a href="https://t.me/Amran_Subhi" target="_blank" class="pro-btn bg-tg">Telegram</a>
-          </div>
+      <div style="text-align: center; margin-top: 20px;">
+        <h2 style="margin: 0;">Autodesk All Apps</h2>
+        <div class="price-badge">15,000 IQD</div>
+        <div class="btn-container">
+          <a href="#" class="pro-btn btn-wa">WhatsApp</a>
+          <a href="#" class="pro-btn bg-ig">Instagram</a>
+          <a href="#" class="pro-btn bg-tg">Telegram</a>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 <script>
-  // Generate 3D Stars
+  // Stars Generation
   const field = document.getElementById('star-field');
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 50; i++) {
     const star = document.createElement('div');
     star.className = 'star';
-    const size = Math.random() * 3 + 'px';
-    star.style.width = size;
-    star.style.height = size;
+    star.style.width = star.style.height = Math.random() * 4 + 'px';
     star.style.left = Math.random() * 100 + '%';
     star.style.top = Math.random() * 100 + '%';
-    star.style.setProperty('--duration', Math.random() * 3 + 2 + 's');
-    star.style.animationDelay = Math.random() * 5 + 's';
+    star.style.setProperty('--duration', Math.random() * 5 + 3 + 's');
     field.appendChild(star);
   }
 
-  // Language Logic
-  const dict = {
-    ku: { header_title: "فرۆشگەها ئەلکترۆنی", auto_t: "Autodesk All Apps", ap: "15,000 IQD" },
-    ar: { header_title: "المتجر الإلكتروني", auto_t: "باقة أوتوديسك", ap: "15,000 د.ع" },
-    en: { header_title: "Digital Store", auto_t: "Autodesk Apps", ap: "15,000 IQD" }
-  };
-
-  function changeLang(val) {
+  // Theme Toggle
+  function toggleTheme() {
     const root = document.getElementById('pro-3d-root');
-    root.setAttribute('dir', val === 'en' ? 'ltr' : 'rtl');
-    document.querySelectorAll('[data-k]').forEach(el => {
-      const k = el.getAttribute('data-k');
-      if(dict[val][k]) el.innerText = dict[val][k];
-    });
+    const icon = document.getElementById('theme-icon');
+    if (root.classList.contains('dark-theme')) {
+      root.classList.remove('dark-theme');
+      icon.innerText = '☀️';
+    } else {
+      root.classList.add('dark-theme');
+      icon.innerText = '🌙';
+    }
   }
 </script>
 </div>
