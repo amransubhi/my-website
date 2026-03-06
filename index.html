@@ -1,187 +1,517 @@
-<div style="display:none;">
-    <a href='<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW0vshcOmS9xVe1XKPFL75dBMQ-YtuGytfEWKP0JlxRPiUz6JSj42LPWk2nlNAx-WJos2CKN25EutEuf9luoi82eZpavrL2IKkI8IqCP1J8XVb4s-fCwwCUuyWquYk1INgTajedpHoO4k3I4KtqOR9tjWGgSyVYlEi0cK5D8rWhvWkSnArxBOy02ptYQ/s4800/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="200" data-original-height="4800" data-original-width="3200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW0vshcOmS9xVe1XKPFL75dBMQ-YtuGytfEWKP0JlxRPiUz6JSj42LPWk2nlNAx-WJos2CKN25EutEuf9luoi82eZpavrL2IKkI8IqCP1J8XVb4s-fCwwCUuyWquYk1INgTajedpHoO4k3I4KtqOR9tjWGgSyVYlEi0cK5D8rWhvWkSnArxBOy02ptYQ/s200/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png"/></a></div'><img src="image.jpg" /></a>
-</div>
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هژمارێن فەرمی یێن ئینستاگرامی و کورس</title>
+    
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdGxkEY3T3IqwMhGbDn2iOd2AXEOOZNudLuCM-uyh4fLK_HkO1WsAY_Ty-CBCEk_4xO1beprj4TokmehnJGrNs0_e_muFIwaEsL2tJzwtHir896oBi8XHCe_EOOhUTsph9IJmi1j_rsxoUqOX1IEEN2FeGpH6b3GEEdtB6MxpPh67HAYeiydTLPW6IFfQR/s320/Gemini_Generated_Image_7907557907557907.png" type="image/png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
 
-<div id="pro-3d-root" class="dark-theme">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+    <style>
+        :root {
+            --primary: #ff6a00;
+            --primary-grad: linear-gradient(135deg, #ff8c00, #ff4500);
+            --ig-grad: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            --bg-color: #f0f2f5;
+            --text-color: #1a202c;
+            --card-bg: rgba(255, 255, 255, 0.90);
+            --shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
 
-  /* --- VARIABLES --- */
-  :root {
-    --bg-color: #f0f2f5;
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --text-color: #1e293b;
-    --header-bg: rgba(255, 255, 255, 0.5);
-    --star-color: #3b82f6;
-  }
+        [data-theme="dark"] {
+            --bg-color: #0b0e14;
+            --text-color: #f1f5f9;
+            --card-bg: rgba(26, 31, 41, 0.90);
+            --shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
 
-  .dark-theme {
-    --bg-color: #0f172a;
-    --card-bg: rgba(30, 41, 59, 0.7);
-    --text-color: #f8fafc;
-    --header-bg: rgba(15, 23, 42, 0.6);
-    --star-color: #ffffff;
-  }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans Arabic', Tahoma, sans-serif; transition: background 0.3s ease, color 0.3s ease; }
+        body { background: var(--bg-color); color: var(--text-color); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+        
+        .bg-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; overflow: hidden; background: var(--bg-color); }
+        .sphere { position: absolute; border-radius: 50%; filter: blur(3px); animation: float3d infinite alternate ease-in-out; }
+        .sphere1 { width: 350px; height: 350px; background: radial-gradient(circle at 30% 30%, #ff8c00, #ff4500); top: -5%; left: -5%; animation-duration: 12s; }
+        .sphere2 { width: 250px; height: 250px; background: radial-gradient(circle at 30% 30%, #3897f0, #00c4cc); bottom: 10%; right: -5%; animation-duration: 18s; }
+        .glass-blur { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; backdrop-filter: blur(50px); -webkit-backdrop-filter: blur(50px); }
 
-  #pro-3d-root {
-    all: initial;
-    display: block;
-    width: 100%;
-    min-height: 100vh;
-    font-family: 'Tajawal', sans-serif;
-    background: var(--bg-color) !important;
-    color: var(--text-color) !important;
-    transition: background 0.5s ease;
-    position: relative;
-    overflow-x: hidden;
-    direction: rtl;
-  }
+        @keyframes float3d { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-5vw, 15vh) scale(0.95); } }
 
-  /* --- NEW STAR ANIMATION --- */
-  .bg-animation {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 0;
-    pointer-events: none;
-  }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: var(--card-bg); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .nav-start { display: flex; align-items: center; gap: 20px; }
+        .logo { cursor: pointer; display: flex; align-items: center; } 
+        .logo img { width: 45px; height: 45px; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        .main-nav { display: flex; gap: 10px; }
+        .nav-link { text-decoration: none; color: var(--text-color); font-weight: 700; display: flex; align-items: center; gap: 5px; padding: 8px 12px; border-radius: 10px; }
+        .nav-link:hover { background: rgba(255, 106, 0, 0.1); color: var(--primary); }
 
-  .star {
-    position: absolute;
-    background: var(--star-color);
-    border-radius: 50%;
-    opacity: 0.5;
-    animation: floatStars var(--duration) ease-in-out infinite;
-  }
+        .lang-wrapper { position: relative; cursor: pointer; padding: 8px 12px; background: var(--bg-color); border-radius: 10px; display: flex; align-items: center; gap: 8px; font-weight: 700; }
+        .lang-wrapper img { width: 20px; height: 15px; object-fit: cover; border-radius: 2px; }
+        .lang-dropdown { position: absolute; top: 100%; left: 0; margin-top: 10px; background: var(--card-bg); padding: 10px; border-radius: 10px; display: none; flex-direction: column; gap: 5px; box-shadow: var(--shadow); min-width: 160px; z-index: 100; border: 1px solid rgba(128, 128, 128, 0.1); }
+        .lang-dropdown.active { display: flex; }
+        .lang-item { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; text-decoration: none; color: var(--text-color); font-weight: 600; transition: 0.2s; }
+        .lang-item:hover { background: rgba(255,106,0,0.1); color: var(--primary); }
+        .lang-item img { width: 20px; height: 15px; object-fit: cover; border-radius: 2px; }
+        [dir="ltr"] .lang-dropdown { right: 0; left: auto; }
 
-  @keyframes floatStars {
-    0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
-    50% { transform: translateY(-100px) scale(1.5); opacity: 0.7; }
-  }
+        .theme-toggle { cursor: pointer; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-grad); color: white; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 4px 10px rgba(255,106,0,0.3); }
 
-  /* --- DARK/LIGHT TOGGLE --- */
-  .theme-toggle {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 100;
-    cursor: pointer;
-    background: var(--header-bg);
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 10px;
-    border-radius: 50%;
-    width: 45px; height: 45px;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    backdrop-filter: blur(10px);
-  }
+        .section-title { margin: 40px 0 30px; font-size: 1.8rem; font-weight: 900; text-align: center; }
+        .ig-accounts-grid, .subs-grid, .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; }
+        
+        .card { background: var(--card-bg); border-radius: 25px; padding: 35px 20px; text-align: center; box-shadow: var(--shadow); border: 1px solid rgba(128, 128, 128, 0.1); transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); }
 
-  /* --- UI CONTENT --- */
-  .pro-header {
-    background: var(--header-bg) !important;
-    backdrop-filter: blur(15px);
-    padding: 50px 20px;
-    text-align: center;
-    border-radius: 0 0 40px 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    position: relative; z-index: 1;
-  }
+        .ig-profile-img { width: 110px; height: 110px; border-radius: 50%; padding: 4px; background: var(--ig-grad); margin-bottom: 15px; }
+        .ig-profile-img img { width: 100%; height: 100%; border-radius: 50%; border: 3px solid var(--card-bg); object-fit: cover; }
+        .card h3 { font-size: 1.25rem; margin-bottom: 8px; direction: ltr; }
+        
+        .btn { background: var(--primary-grad); color: white; padding: 12px 20px; border-radius: 50px; font-weight: bold; text-decoration: none; width: 100%; margin-top: auto; border: none; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px;}
+        .ig-btn { background: var(--ig-grad); }
+        .btn:hover { transform: scale(1.05); opacity: 0.9; }
 
-  .pro-title { font-size: 28px; font-weight: 900; color: #3b82f6 !important; }
+        .search-container { max-width: 600px; margin: 30px auto; padding: 0 20px; }
+        .search-box { display: flex; background: var(--card-bg); border-radius: 50px; padding: 5px; border: 1px solid rgba(128, 128, 128, 0.2); box-shadow: var(--shadow); }
+        .search-box input { flex: 1; border: none; background: transparent; padding: 15px 25px; outline: none; color: var(--text-color); font-size: 1rem; }
+        .search-box button { background: var(--primary-grad); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; font-size: 1rem; }
 
-  .card-container { display: flex; justify-content: center; padding: 60px 20px; perspective: 1000px; z-index: 1; position: relative; }
+        .sub-price { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 10px 0; direction: ltr; }
+        .course-img { width: 100%; height: 180px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; }
 
-  .card-3d {
-    width: 350px;
-    background: var(--card-bg) !important;
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transform-style: preserve-3d;
-    transition: 0.5s;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  }
+        /* --- دیزاینا پەڕەیا تایبەت ب ئۆتۆدێسک --- */
+        .post-container { max-width: 800px; margin: 40px auto; padding: 40px; background: var(--card-bg); border-radius: 30px; box-shadow: var(--shadow); border: 1px solid rgba(128, 128, 128, 0.1); backdrop-filter: blur(10px); }
+        .post-header-img { width: 100%; max-height: 400px; object-fit: contain; border-radius: 20px; margin-bottom: 25px; }
+        .post-title { font-size: 2rem; font-weight: 900; margin-bottom: 20px; color: var(--text-color); text-align: center;}
+        .post-desc { font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; opacity: 0.9; text-align: justify; }
+        
+        .autodesk-info-box { background: rgba(255, 106, 0, 0.05); padding: 25px; border-radius: 20px; margin: 25px 0; border: 1px dashed var(--primary); text-align: right; }
+        [dir="ltr"] .autodesk-info-box { text-align: left; }
+        .feat-list { list-style: none; padding: 0; margin-top: 15px; }
+        .feat-list li { margin-bottom: 15px; font-size: 1.05rem; opacity: 0.9; display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; }
+        .icon-check { width: 22px; height: 22px; fill: #28a745; flex-shrink: 0; margin-top: 3px;}
+        .price-badge { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 30px 0; text-align: center; direction: ltr;}
+        
+        .post-social-btns { display: flex; justify-content: center; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+        .hero-social-btn { padding: 15px 30px; border-radius: 15px; color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3s; font-size: 1.05rem; border: none; }
+        .hero-social-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); color: white; opacity: 0.95;}
+        .bg-wa { background: #25D366; }
+        .bg-tg { background: #0088cc; }
+        .bg-ig-hero { background: var(--ig-grad); }
 
-  .card-3d:hover { transform: translateY(-10px) rotateX(5deg); }
+        /* Modal ئینستاگرام */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(8px); }
+        .modal { background: var(--card-bg); padding: 30px; border-radius: 25px; max-width: 480px; width: 90%; text-align: center; position: relative; }
+        .modal.active { animation: zoomIn 0.3s forwards; }
+        @keyframes zoomIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--text-color); }
 
-  .img-wrapper { margin-top: -80px; display: flex; justify-content: center; transform: translateZ(50px); }
-  .pro-img { width: 180px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); }
+        footer { text-align: center; padding: 30px; background: var(--card-bg); margin-top: auto; }
+        
+        @media (max-width: 900px) {
+            .nav-start { gap: 15px; }
+            .nav-link span { display: none; } 
+            .post-container { margin: 20px 15px; padding: 20px; }
+            .hero-social-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <div class="bg-container"><div class="sphere sphere1"></div><div class="sphere sphere2"></div></div>
+    <div class="glass-blur"></div>
 
-  .price-badge {
-    background: #3b82f6 !important;
-    color: white !important;
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 900;
-    margin: 20px 0;
-    display: inline-block;
-  }
-
-  .btn-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .btn-wa { grid-column: span 2; background: #25D366 !important; }
-  .pro-btn {
-    padding: 12px; border-radius: 12px; text-decoration: none; color: white !important;
-    font-weight: bold; text-align: center; transition: 0.3s;
-  }
-  .bg-ig { background: #e1306c !important; }
-  .bg-tg { background: #0088cc !important; }
-</style>
-
-<div class="bg-animation" id="star-field"></div>
-
-<div class="theme-toggle" onclick="toggleTheme()">
-  <span id="theme-icon">🌙</span>
-</div>
-
-<div class="ui-wrapper">
-  <div class="pro-header">
-    <h1 class="pro-title">فرۆشگەها ئەلکترۆنی</h1>
-    <p style="color: #64748b;">باشترین بەرهەمێن دیجیتاڵی ب گرەنتی</p>
-  </div>
-
-  <div class="card-container">
-    <div class="card-3d">
-      <div class="img-wrapper">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwzXefDGWLNCxrp4ugci8v6PXoKm3c1rmwQKin-rlm2u1WYR6embVoV3XG1VCEb5cPwPUjP_ouuVB1E6T1z3Tjz4yOPoQExFrBov6jYR_5EyOipi4_yj6WmoEhXZC6KBlVq9PKPwpgQ0Zv-iHdAE-yq6IU4PSI_Pgei1mOlI9QtgwdjbNvbkAFV0vXeQ/s320/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86.png" class="pro-img">
-      </div>
-      <div style="text-align: center; margin-top: 20px;">
-        <h2 style="margin: 0;">Autodesk All Apps</h2>
-        <div class="price-badge">15,000 IQD</div>
-        <div class="btn-container">
-          <a href="#" class="pro-btn btn-wa">WhatsApp</a>
-          <a href="#" class="pro-btn bg-ig">Instagram</a>
-          <a href="#" class="pro-btn bg-tg">Telegram</a>
+    <header>
+        <div class="nav-start">
+            <div class="logo" onclick="goHome()">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdGxkEY3T3IqwMhGbDn2iOd2AXEOOZNudLuCM-uyh4fLK_HkO1WsAY_Ty-CBCEk_4xO1beprj4TokmehnJGrNs0_e_muFIwaEsL2tJzwtHir896oBi8XHCe_EOOhUTsph9IJmi1j_rsxoUqOX1IEEN2FeGpH6b3GEEdtB6MxpPh67HAYeiydTLPW6IFfQR/s320/Gemini_Generated_Image_7907557907557907.png" alt="Logo">
+            </div>
+            <nav class="main-nav">
+                <a href="#" onclick="goHome(event)" class="nav-link"><i class="fas fa-home"></i><span data-key="navHome">پەڕەی سەرەکی</span></a>
+                <a href="#instagram-section" class="nav-link" onclick="scrollToSection('instagram-section', event)"><i class="fab fa-instagram"></i><span data-key="navIg">ئینستاگرام</span></a>
+                <a href="#subscriptions-section" class="nav-link" onclick="scrollToSection('subscriptions-section', event)"><i class="fas fa-tags"></i><span data-key="navSubs">ئشتراک</span></a>
+                <a href="#courses-section" class="nav-link" onclick="scrollToSection('courses-section', event)"><i class="fas fa-graduation-cap"></i><span data-key="navCourses">کۆرس</span></a>
+            </nav>
         </div>
-      </div>
+        <div class="nav-right" style="display: flex; gap: 15px; align-items: center;">
+            <div class="lang-wrapper" onclick="toggleLangDropdown(event)">
+                <img id="currentLangFlag" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrcD2vuDdk-1jwnfYO6LUwsTZQ6_T2iEKB1kXfLf6hzhCdWqJWOdXi5D1kQMb4zosEeouBPAwK4OySvDc5NdFpIlXY2izzu_42alBoPwaN3NngnKQBbqeI7TvoW1vzgoXeoXj_EXWHFRpv6Wi2D6PavAhrVMQPuxMNXBfWOm647tM7F4vakfC4s0Hb5Ifg/s320/ChatGPT%20Image%20Mar%205,%202026,%2001_12_51%20PM.png" alt="Flag">
+                <span id="langText">کوردی (بادینی)</span> <i class="fas fa-chevron-down" style="font-size: 0.8rem;"></i>
+                <div class="lang-dropdown" id="langList">
+                    <a href="#" class="lang-item" onclick="changeLang('ku_badini', event)"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrcD2vuDdk-1jwnfYO6LUwsTZQ6_T2iEKB1kXfLf6hzhCdWqJWOdXi5D1kQMb4zosEeouBPAwK4OySvDc5NdFpIlXY2izzu_42alBoPwaN3NngnKQBbqeI7TvoW1vzgoXeoXj_EXWHFRpv6Wi2D6PavAhrVMQPuxMNXBfWOm647tM7F4vakfC4s0Hb5Ifg/s320/ChatGPT%20Image%20Mar%205,%202026,%2001_12_51%20PM.png"> کوردی (بادینی)</a>
+                    <a href="#" class="lang-item" onclick="changeLang('ku_sorani', event)"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrcD2vuDdk-1jwnfYO6LUwsTZQ6_T2iEKB1kXfLf6hzhCdWqJWOdXi5D1kQMb4zosEeouBPAwK4OySvDc5NdFpIlXY2izzu_42alBoPwaN3NngnKQBbqeI7TvoW1vzgoXeoXj_EXWHFRpv6Wi2D6PavAhrVMQPuxMNXBfWOm647tM7F4vakfC4s0Hb5Ifg/s320/ChatGPT%20Image%20Mar%205,%202026,%2001_12_51%20PM.png"> کوردی (سۆرانی)</a>
+                    <a href="#" class="lang-item" onclick="changeLang('ar', event)"><img src="https://flagcdn.com/w20/sa.png"> العربية</a>
+                    <a href="#" class="lang-item" onclick="changeLang('en', event)"><img src="https://flagcdn.com/w20/gb.png"> English</a>
+                </div>
+            </div>
+            <div class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon" id="tIcon"></i></div>
+        </div>
+    </header>
+
+    <div id="main-page">
+        <main>
+            <div style="text-align: center; padding: 50px 20px;">
+                <h1 data-key="heroTitle">هژمارێن فەرمی یێن ئینستاگرامی و کورس</h1>
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" data-key-ph="searchPh" placeholder="ل کورس و هژماران بگەرە...">
+                        <button data-key="searchBtn">لێگەریان</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="instagram-section" data-key="igTitle">هژمارێن فەرمی یێن ئینستاگرامی</h2>
+            <div class="ig-accounts-grid" id="accountsGrid"></div>
+
+            <h2 class="section-title" id="subscriptions-section" data-key="navSubs">ئشتراک</h2>
+            <div class="subs-grid">
+                <div class="card" onclick="openAutodeskPage()" style="cursor: pointer;">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgnJy4hetsa9WenaMJvqiVn4Qs6YNrYVQnQBbMSFi6uDF8ACzdeIJWjNncuag-TXXywsDGmf6uyHxyiZ_ucY_FRL9zhgAQAmBW2Y5ppFmR7I47Ctoj42WZEz8IsglxHTPSP_zw-8zmwJ96thkw66wwHD_TxlYMVhu4N4Z6qCa2FOWuElrqhxoiTpeDpNhQ/s320/ChatGPT%20Image%20Mar%205,%202026,%2009_50_32%20PM.png" style="width: 80px; height: 80px; object-fit: contain;" alt="Autodesk">
+                    </div>
+                    <h3 data-key="auto_t" style="margin-bottom: 8px;">Autodesk All Apps</h3>
+                    <div class="sub-price" data-key="ap" style="margin-bottom: 15px; font-size: 1.6rem;">15,000 IQD</div>
+                    <button class="btn" data-key="readMoreBtn">پێزانینێن زێدەتر</button>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="courses-section" data-key="navCourses">کۆرسێن بەردەست</h2>
+            <div class="courses-grid">
+                <div class="card" style="cursor: default;">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400" class="course-img">
+                    <h3 data-key="course1Title">AutoCAD Mastery</h3>
+                    <button class="btn" data-key="viewCourse">View Course</button>
+                </div>
+                <div class="card" style="cursor: default;">
+                    <img src="https://images.unsplash.com/photo-1541888086925-eb263073dbb6?w=400" class="course-img">
+                    <h3 data-key="course2Title">ETABS Analysis</h3>
+                    <button class="btn" data-key="viewCourse">View Course</button>
+                </div>
+            </div>
+        </main>
     </div>
-  </div>
-</div>
 
-<script>
-  // Stars Generation
-  const field = document.getElementById('star-field');
-  for (let i = 0; i < 50; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.width = star.style.height = Math.random() * 4 + 'px';
-    star.style.left = Math.random() * 100 + '%';
-    star.style.top = Math.random() * 100 + '%';
-    star.style.setProperty('--duration', Math.random() * 5 + 3 + 's');
-    field.appendChild(star);
-  }
+    <div id="autodesk-page" style="display: none; padding: 20px;">
+        <div class="post-container">
+            <button onclick="closeAutodeskPage()" class="btn" style="width: auto; margin-bottom: 20px; background: var(--card-bg); color: var(--text-color); border: 1px solid rgba(128,128,128,0.2);">
+                <i class="fas fa-arrow-right" id="backIcon"></i> <span data-key="backBtn">ڤەگەڕیان</span>
+            </button>
+            
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgnJy4hetsa9WenaMJvqiVn4Qs6YNrYVQnQBbMSFi6uDF8ACzdeIJWjNncuag-TXXywsDGmf6uyHxyiZ_ucY_FRL9zhgAQAmBW2Y5ppFmR7I47Ctoj42WZEz8IsglxHTPSP_zw-8zmwJ96thkw66wwHD_TxlYMVhu4N4Z6qCa2FOWuElrqhxoiTpeDpNhQ/s1536/ChatGPT%20Image%20Mar%205,%202026,%2009_50_32%20PM.png" class="post-header-img" alt="Autodesk Setup">
 
-  // Theme Toggle
-  function toggleTheme() {
-    const root = document.getElementById('pro-3d-root');
-    const icon = document.getElementById('theme-icon');
-    if (root.classList.contains('dark-theme')) {
-      root.classList.remove('dark-theme');
-      icon.innerText = '☀️';
-    } else {
-      root.classList.add('dark-theme');
-      icon.innerText = '🌙';
-    }
-  }
-</script>
-</div>
+            <h1 class="post-title" data-key="auto_title_page">Autodesk All Apps - بەشداریا فەرمی</h1>
+            
+            <p class="post-desc" data-key="auto_desc_long">
+                نها دشێی ب ساناهیترین شێوە و ب بهایەکێ گونجای ئشتراکا فەرمی یا هەمی بەرهەمێن کۆمپانیا Autodesk بدەستخۆڤە بینی. ئەڤ ئشتراکە ڕاستەوخۆ ل سەر ئیمیلێ تە یێ شەخسی دهێتە ئەکتیڤکرن و چ ئاریشەیێن کڕاک و ڤایرۆسان دگەل نینە. ب درێژی دێ شێی مفا ژ هەمی بەرنامەیێن ئەندازیاری وەرگری.
+            </p>
+
+            <div class="autodesk-info-box">
+                <h3 style="color: var(--primary); text-align: center; margin-bottom: 15px;" data-key="auto_feat_title">تایبەتمەندیێن ئشتراکێ:</h3>
+                <ul class="feat-list">
+                    <li><svg class="icon-check" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span data-key="af1">ئشتراك ل سەر ئیمیلێ شەخسی (بتر ژ ٤٦ بەرنامە).</span></li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span data-key="af2">بێی "Crack" و ڤایرۆس، بەرنامە ب گرەنتی کار دکەت.</span></li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span data-key="af3">کورسێن فەرمی نافدا هەر گافا ته كورس دوماهيك ئينا راستەخو باوەرنامێ وەركرى و (Certificate) بۆ CV باشه.</span></li>
+                    <li><svg class="icon-check" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span data-key="af4">ئەگەر فۆرمات ژی بکەی، ب ساناهی دێ شێى دانلودكەى.</span></li>
+                </ul>
+            </div>
+
+            <div class="price-badge" data-key="ap">15,000 IQD</div>
+
+            <h3 style="margin-bottom: 15px; text-align: center;" data-key="contact_title">بۆ پەیوەندیێ و داواکرنێ:</h3>
+            
+            <div class="post-social-btns">
+                <a href="https://wa.me/9647500000000" target="_blank" class="hero-social-btn bg-wa">
+                    <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+                </a>
+                <a href="https://www.instagram.com/engineering_with_amran/" target="_blank" class="hero-social-btn bg-ig-hero">
+                    <i class="fab fa-instagram"></i> <span>Instagram</span>
+                </a>
+                <a href="https://t.me/Amran_Subhi" target="_blank" class="hero-social-btn bg-tg">
+                    <i class="fab fa-telegram"></i> <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal" id="modalBox" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-img-large"><img id="modalImgSrc" src="" style="width:100%; height:100%; border-radius:50%; object-fit: cover;"></div>
+            <h2 id="modalTitle" style="direction: ltr;"></h2>
+            <p id="modalDesc" style="margin: 20px 0; line-height: 1.8; text-align: justify;"></p>
+            <a id="modalLink" href="#" target="_blank" class="btn ig-btn">Follow Instagram</a>
+        </div>
+    </div>
+
+    <footer><p>Copyright © 2026 <a href="https://www.instagram.com/engineering_with_amran" target="_blank" style="text-decoration: none; color: var(--primary);">engineering_with_amran</a></p></footer>
+
+    <script>
+        const profiles = [
+            { id: 'amran', user: 'engineering_with_amran', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHtGEWRYyaWIlg7FlX2hHSXCcjhPawOA3Ci6FpqeIqgLoHVzPLfcUgQDA_kLN0DeRYlo5LJ4gWEZl_ADTG7anIsRoVA8EMPOlBrjEbfEycaDkBb7IF-Nu1l31gDOHMHVmWhiFNJhMawiXktQ3rs3evpQCpShgbzaA_HqorW234iTFfxa6RZmvGuldRLUxE/s1080/SnapInsta.to_517122468_17861558238437799_8562239776642277799_n.jpg' },
+            { id: 'avrazz', user: 'engineering.with.avrazz', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJFAUTWF3cRQxiAn3lAVvbUxiOVCggGpwbONBf0bGuLId_lXma1Ay8TO-OWpf-0CbAkRTNAvoge0xJxpGzClNcCsRhcGKAMGhcOOYjnRYObZ8Clna9HBhC8_7Bzpn4a_4QlUsRnN-rScRenn8UjPgZFhLb-CdwA6dPBOI_-6uTJt_z3Vl5HvuWlUSQy8mJ/s1080/SnapInsta.to_308577306_363074802612428_9066199135212414130_n.jpg' },
+            { id: 'alan', user: 'alan__engineer', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjy3W66i6WMVLuq1bm_vHANw86NzvN4nmHSD3E-lbR0yDdAWDFcCs4Dnaoa2uZOw-cEJEMtdxHgaWUTYKr8mWV9HLyqKEbkorvV9XZuLqj0mKhaWwnZFro_9Np5X7776EbezYnnVh3dNP7qDKoSlCU5fCsZMXFfkRuWsg5HXHvoSM63jmHte_qtxBpVkob5/s1080/SnapInsta.to_627825179_17854415298615315_8926342721208528445_n.jpg' },
+            { id: 'masoud', user: 'eng.masoud_', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGVGxNP6OdqOsgpdWLwbJVvyLawYjL5RRx294M5IxuUF84pk1yC2gd6nssw5BJe65X7xmz1f9Zc1GWbpI21DFjWVwE1HmL-RU4WFj8keFr-ZHrYHdXzPiLHGu_7cJxEksoxfHIV2jwiytzFnVXrzEBa4oH_yA8h7jfVl4UhKUIGl4zNrGGjMd_OhIj1S0G/s1080/10.jpg' },
+            { id: 'srood', user: 'srood_iskandar', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf8v9Sk6fFhddjpXb8r7pHWCoXJK_YF1MS_jBqIon2RgPrlivmGhAT1Wv9B_DffS3-wft9Zzz6iFffLwcknIpWM0nypFA-J1y9q0rpq_03LmjHO0ZixlVAy83cqCKrIJXZeoYJXWUmnoQSEw6VszJu9M6PLKo6ZtR8J5iX7dO53I2q2knZupurCl7MtXvp/s1080/SnapInsta.to_620499304_18502500664075773_4001083221732146746_n.jpg' },
+            { id: 'andaz', user: 'andaz.community', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAICEXE4JD7rIDa9ekw55C_4C5i2ExOHuhtrI_lH59YXI7219UtezGUAXPSurGQ_KPvRDgxGTseMyZ-aAK0RdF6vMVAV-DUm_IlXi2S_5_f-1LsDQERwc4JBKtkOt_ojLc0WMlf0Du02MKNkEuHJVg24cFfU7rEkvwI2gbbGbjkqFchcGCsSZsBacpzb4k/s768/1.jpg' },
+            { id: 'payam', user: 'payam_civil1', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQxp4Oaqab-jZVpKLuIobSAam7Xr3sVi086oLfXULWdFnXw3pkPRupBW4LJ3V1DuYFHTbQrfGtKF0oKdKA3X69PZy2OK1A-mQKct4BfWpexHXPPM93NtJgNZMgNito0iCG5GXaV31uzxa9eNeIxIz2gHJeblyrxV0kmZLv5ziQFQiyzTUzoYZd-Uo_9xv/s929/3.jpg' },
+            { id: 'muhammed', user: 'engineering.with.muhammed', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivEsKsJgyLa4r09lwAT5UU2MppAaYa90TKCBW_QoANueMf6O4jGJ_NxsULut-cd3npE7TdtAuFScUTQGEIiFfikQsoWT6lZRXLSc1wrOXhkpX8gy9A0ZSbV9s0QKkLWqEhcItYP6ljJ1zk2VpQdCKUmLemgemMPWaacHcQkWmX6RVT6mwVovq7lUbT2Wrh/s1037/4.jpg' },
+            { id: 'zana', user: 'eng_zana001', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7ngMKHy8xtSZxiBTZ9ae6F6ld_2l-xo14Dh4CfzhoIJnIlvgQaL4hvCvT74Yg8Iz9DcPex-ERua5BBlhLnpnUVTQnmrOWinPribZ9PQ-K9qH1QfRLiS362UXEz_Ju7M8lYDXjJgCnOEHv_lb3A3uBP3VV7M-FIURghqZDsVZVaZeJBXc4MZPa2GeOtv3-/s1080/8.jpg' },
+            { id: 'yasr', user: 'yasr_chicho', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLqfU9MbWsdtZTE7TbQlXZIIxS6AB8rjriKzFyhqBEU-qBaRAkngN1CaVrocJdyYl1XWZrzqO23PZmXdyRZuWsX-bPv2tgWDga3aWVRecOru9yxRY0-PgcnN8IOQTPWvSy8KjB4n2jdXZMB04xKCHAKlYMjsxstiw9cA-Ya9F4j-bTlVDdkE2Z4VKqn_OO/s1080/7.jpg' },
+            { id: 'foreng', user: 'for__engineer', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFW9wgI5osWqc0KoVabv0HA7IM7e1CqZfNFFoi-dy8-DJ6_l0X68ycImRBXhC5Y7WrvnrbcAkLPiehSyef-eOgOtOM2ibMJHNQMkHdIRq2sUaACHEQm1EHWOLniHvxW08dX5heGacJsNFcPTrIE_bFcY1WnD61M2tRkAfOCSK4L1sLHcdXmQXQJ-Kc25Vr/s736/6.jpg' },
+            { id: 'civil', user: 'civil_engineering0', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQMTSPqDG12-PRBTg9gYDyaVjVcUEW77-i3DZLie8K4NLtgj8HG88Oqsig11g1iDbchJe-o0T9W4F2KmIQXF-EaUdVPfPkIV2PofO9tju9TJWeXUichQRP4ORhXFsLLYbMOwxWmKW8AmvW1WX4pFZT7BaSXAPdkqVb65YYtnngqBsKS7VkirMbU6A5XM7I/s1080/SnapInsta.to_626534881_17872497819524033_5987134110507278796_n.jpg' },
+            { id: 'alaa', user: 'eng.aalarasheed', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtPouFAtoq5hh36Csl0d2OOCYJzsN3wNgrKgcue6E4ER0859ummVZZKR_FHdMfSVlx7v2Lpeu24XaRgCe5cdzRZz7Twj1QEJblR9k1gPzUOEuey8WcPsgYmWxYBG_v5zL-MoIDkttXwGzNSHbFm7FG97Lmqkc_HKnUXQshLcTcKZb-QijveZhVFCMXfngd/s1080/SnapInsta.to_557620152_17880438954400530_1800061845605003405_n.jpg' },
+            { id: 'dlvan', user: 'dlvan.buildtech_', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8b_IRwCkRGzcI3CutHphVBxB2MgOPfYQpAYp4w96ntDEjRtwTKwaLsiJsdQ2oMaJ6nQReRpc7LPH0F0z7tpyj9bCpZ_3FbW4l0DA8_vvAZwtzzQeWu5Wci95DbhdZQLPid3_q4tKacjPEn44JFNCfbnKyl5Yhh8rv14dZsA6Yodzjg1T4YG2cewTPi_5P/s1024/2.jpg' },
+            { id: 'nadia', user: 'c.e.nadia', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPHCTWI-GnU_mZETyxZgGKmdByNjD7AA6umZEYZMFzd11moYIxKU_zsiGgElLinMaWfhBNvThSu_ZOkdG0cWL64u6bncMVoYnUcVptR9siWfctuRevGgO1r_G7wZ0tJW2GyFx9ddlEBvnRslqxzYEH3utwve0b7cEh9hFZyC34Q9a6P_MK2dEUI3xcW0a7/s1024/5.jpg' },
+            { id: 'engwithme', user: 'engineering.with.me', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0Op7m_TTslVgh4xz8Lf1aczJxsmJ7LSBDuzmCazLBGhTOdbYFrQoEbhT-vYDptBSULkXmtx-RGK15_LpKZS5pC1m3CiS6BhhVpD6wg2iJr6513Zw9_oi3UOF5n4PlSBrI60Y-MPpGTlnWRAz8qFaniYkepCz34MTVQKuzPTcrIxpj4wDMmKizmBO7JWOD/s1080/9.jpg' },
+            { id: 'payana', user: 'eng_payana', img: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEuiyR4E11UpnlMxLcgR7mmS1SW5KCyuE_XituqR4nUIdX2w9wKGHM6gt_R-iZXp1DHGEqodUOAigsZhNyS6OMNZYgpLY0JcKtlls8T7imMLEBMUzgovk1NHEkChtb-IV7RtJQnnX0QafEnQEns0S80DW1GM9nhjvzzOIqRuEgXHDFgnJiHF7IuwKVBel9/s565/11.jpg' }
+        ];
+
+        const translations = {
+            ku_badini: {
+                navHome: "پەڕەی سەرەکی", navIg: "ئینستاگرام", navSubs: "ئشتراک", navCourses: "کۆرس",
+                heroTitle: "هژمارێن فەرمی یێن ئینستاگرامی و کورس", igTitle: "هژمارێن فەرمی یێن ئینستاگرامی", follow: "فولو بكه", searchPh: "ل کورس و هژماران بگەرە...", searchBtn: "لێگەریان",
+                course1Title: "کۆرسێ فێربوونا AutoCAD", course2Title: "کۆرسێ بەرنامێ ETABS", viewCourse: "دیتنا کۆرسی",
+                auto_t: "Autodesk All Apps", auto_s: "بەشداریا ساڵانە (١ ساڵ)", ap: "15,000 IQD",
+                readMoreBtn: "پێزانینێن زێدەتر", backBtn: "ڤەگەڕیان", auto_title_page: "Autodesk All Apps - بەشداریا فەرمی", auto_feat_title: "تایبەتمەندیێن ئشتراکێ:", contact_title: "بۆ پەیوەندیێ و داواکرنێ:",
+                auto_desc_long: "نها دشێی ب ساناهیترین شێوە و ب بهایەکێ گونجای ئشتراکا فەرمی یا هەمی بەرهەمێن کۆمپانیا Autodesk بدەستخۆڤە بینی. ئەڤ ئشتراکە ڕاستەوخۆ ل سەر ئیمیلێ تە یێ شەخسی دهێتە ئەکتیڤکرن و چ ئاریشەیێن کڕاک و ڤایرۆسان دگەل نینە. ب درێژی دێ شێی مفا ژ هەمی بەرنامەیێن ئەندازیاری وەرگری.",
+                af1: "ئشتراك ل سەر ئیمیلێ شەخسی (بتر ژ ٤٦ بەرنامە).", af2: "بێی 'Crack' و ڤایرۆس، بەرنامە ب گرەنتی کار دکەت.",
+                af3: "کورسێن فەرمی نافدا هەر گافا ته كورس دوماهيك ئينا راستەخو باوەرنامێ وەركرى و (Certificate) بۆ CV باشه.",
+                af4: "ئەگەر فۆرمات ژی بکەی، ب ساناهی دێ شێى دانلودكەى.",
+                caps: {
+                    amran: "ل ڤێرێ فێری دابەزاندن و ئەکتیڤکرنا پرۆگرامێن ئەندازیاری 💻 و پەرتووک و ژێدەرێن ب مفا ببە و بدەستخۆڤە ئینە، هەروەسا نووترین فێرکاریێن ئەندازیاری د ستۆریان دا ب هەمی هویرکارییان ببینه. 📚✨",
+                    andaz: "پلاتفۆرمەکێ تایبەت و پێشەنگ بۆ گەهاندنا زانیاریێن ئەندازیاری و خزمەتگوزاریێن سەردەمیانە ب زمانێ کوردی بۆ بلندکرنا ئاستێ زانستی یێ ئەندازیاران. 🏗️📐",
+                    dlvan: "تەکنەلۆژیا ئاڤاکرنێ، دیزاینێن مۆدێرن و نووترین زانیاریێن ئەندازیاری دگەل ئەندازیار دلڤان بۆ هندێ تو کارەکێ سەردەمیانە و ب کوالێتی ئەنجام بدەی. 🏠🛠️",
+                    payam: "پێزانینێن پراکتیکی ل سەر ئەندازیاریا شارستانی، بڕێڤەبرنا پرۆژەیان و چارەسەرکرنا کێشەیێن تەکنیکی یێن رۆژانە د کاتێ کارکرنێ دا. 📊👷‍♂️",
+                    muhammed: "فێربوونا بەرنامەیێن ئەندازیاری یێن پێشکەفتی و شیکارکرنا ورد یا نەخشەیان ب دەستێن ئەندازیار محەمەد بۆ پەرەپێدانا شیانێن تە. 💻🏢",
+                    nadia: "داهێنان د جیهانا دیزاین و ئەندازیاریا بیناسازیێ دا و نیشاندانا نووترین کارێن هونەری و تەکنیکی ب دەستێن ئەندازیار نادیە. ✨🏗️",
+                    foreng: "ژێدەرەکێ دەولەمەند و گشتگیر بۆ قوتابیێن کۆلیژا ئەندازیاریێ بۆ دەستکەفتنا هەر بابەتەکێ زانستی، توێژینەوە و رێبەرێن پێدڤی. 🎓📚",
+                    yasr: "ئەزموونێن مەیدانی یێن پراکتیکی د جێبەجێکرنا پرۆژەیێن ئاڤاکرنێ دا و نیشاندانا کارێن رۆژانە یێن پرۆژەیان ب شێوەیەکێ هویر و زانستی. 🚧🔩",
+                    zana: "ئەندازیاری ب دیدەکا نوی و داهێنان د جیهانا بیناسازیێ و دیزاینێ دا دگەل ئەندازیار زانا بۆ کارەکێ مۆدێرن و سەرکەفتی. 💡🏗️",
+                    engwithme: "وەرە دگەل من دا پێکڤە فێری نهێنیێن کارێن ئەندازیاریێ و جێبەجێکرنا کاران ل سەر ئەردی ببین ب شێوەیەکێ ساناهی و ب مفاتر. 📐🏗️",
+                    masoud: "باشترین رێنمایی و ئامۆژگاریێن هویر یێن ئەندازیاری بۆ بجهئینانا پرۆژەیێن تە ب باشترین کوالێتی و کێمترین خەرجیێن زێدە. ✅🏢",
+                    payana: "پلاتفۆرمەک بۆ گەشەپێدانا شیانێن تەکنیکی یێن ئەندازیاران و بلندکرنا ئاستێ زانیاریێن وان د بوارێ ئاڤاکرن و جێبەجێکرنێ دا. 🚀📐",
+                    avrazz: "بەشداربە د کۆرسێن فێربوونا بەرنامەیێن ئەندازیاری و شلوڤەکرنا پرۆژەیان ب شێوەیەکێ پراکتیکی. 🏢💻",
+                    alan: "پێزانینێن دەگمەن و پراکتیکی ل سەر ئەندازیاریا شارستانی و جێبەجێکرنا کارێن تەکنیکی دگەل ئەندازیار ئالان. 📏👷‍♂️",
+                    alaa: "شلوڤەکرنا نەخشەیێن ئاڤاهیان و پێدانا زانیاریێن دروست ل سەر جۆر و بکارئینانا کەرەستێن ئاڤاکرنێ ب شێوەیەکێ ئەکادیمی. 🧱📈",
+                    srood: "باشترین زانیاریێن جێبەجێکرنا پرۆژەیان ل مەیدانێ و چارەسەرکرنا کێشەیێن کار د کاتێ جێبەجێکرنێ دا دگەل سرود. 🚧💪",
+                    civil: "هەمی تشتەکێ گرێدای ب جیهانا بەرفرەها ئەندازیاریا شارستانی، تیۆری و پراکتیک، بۆ هەر ئەندازیارەکێ دڤێت پێشکەڤیت. 🌍🧱"
+                }
+            },
+            ku_sorani: {
+                heroTitle: "هەژمارە فەرمییەکانی ئینستاگرام و کۆرسەکان", igTitle: "هەژمارە فەرمییەکانی ئینستاگرام", follow: "فۆڵۆو بکە", navSubs: "ئابوونە", navCourses: "کۆرس", navHome: "پەڕەی سەرەکی", navIg: "ئینستاگرام", searchPh: "گەڕان بۆ کۆرس و هەژمارەکان...", searchBtn: "گەڕان",
+                course1Title: "کۆرسی فێربوونی AutoCAD", course2Title: "کۆرسی بەرنامەی ETABS", viewCourse: "بینینی کۆرس",
+                auto_t: "Autodesk All Apps", auto_s: "بەشداری ساڵانە (١ ساڵ)", ap: "15,000 IQD",
+                readMoreBtn: "زانیاری زیاتر", backBtn: "گەڕانەوە", auto_title_page: "Autodesk All Apps - بەشداری فەرمی", auto_feat_title: "تایبەتمەندییەکانی ئابوونە:", contact_title: "بۆ پەیوەندی و داواکردن:",
+                auto_desc_long: "ئێستا دەتوانیت بە ئاسانترین شێوە و بە نرخێکی گونجاو ئابوونەی فەرمی هەموو بەرهەمەکانی کۆمپانیای Autodesk بەدەستبهێنیت. ئەم ئابوونەیە ڕاستەوخۆ لەسەر ئیمەیڵی کەسی خۆت چالاک دەکرێت و هیچ کێشەیەکی کراک و ڤایرۆسی لەگەڵ نییە.",
+                af1: "ئابوونە لەسەر ئیمەیڵی شەخسی (زیاتر لە ٤٦ بەرنامە).", af2: "بێ 'Crack' و ڤایرۆس، بەرنامە بە گەرەنتی کار دەکات.",
+                af3: "کۆرسە فەرمییەکانی تێدایە و بڕوانامە (Certificate) وەردەگریت.",
+                af4: "ئەگەر فۆرماتیش بکەیت، بە ئاسانی دەتوانیت دایبەزێنیتەوە.",
+                caps: {
+                    amran: "لێرە فێری دابەزاندن و ئەکتیڤکردنی بەرنامە ئەندازیارییەکان 💻 و کتێب و سەرچاوە زانستییە بەسوودەکان ببە بە شێوەیەکی ئاسان. 📚✨",
+                    andaz: "پلاتفۆرمێکی تایبەت و پێشەنگ بۆ گەیاندنی زانیارییە ئەندازیارییەکان و خزمەتگوزارییە نوێیەکان بە زمانی کوردی. 🏗️✨",
+                    dlvan: "تەکنەلۆژیای بیناسازی و دیزاینە مۆدێرنەکان لەگەڵ ئەندازیار دلڤان بۆ ئەوەی کارەکەت بە باشترین شێوە ئەنجام بدەیت. 🏠🛠️",
+                    payam: "زانیاری گرنگی پراکتیکی لەسەر ئەندازیاری شارستانی و چۆنیەتی بەڕێوەبردنی پڕۆژە مەیدانییەکان بە سەرکەوتوویی. 📊🏗️",
+                    muhammed: "فێربوونی بەرنامە ئەندازیارییە پێشکەوتووەکان و خوێندنەوەی وردی نەخشەکان لەگەڵ ئەندازیار محەمەد. 💻🏢",
+                    nadia: "داهێنان لە دیزاین و ئەندازیاری بیناسازیدا بە شێوازێکی نوێ و جیاواز بە دەستی ئەندازیار نادیە. ✨🎨",
+                    foreng: "سەرچاوەیەکی گەورە و دەوڵەمەند بۆ ئەندازیاران و قوتابیانی کۆلێژی ئەندازیاری بۆ هەموو بابەتە زانستییەکان. 🎓📖",
+                    yasr: "زانیاری مەیدانی پراکتیکی و جێبەجێکردنی پڕۆژەکانی بیناسازی لەسەر زەوی بە شێوەیەکی زانستی. 🚧👷‍♂️",
+                    zana: "ئەندازیاری بە دیدێکی نوێ و داهێنان لە جیهانی بیناسازی و دیزاینە نوێیەکاندا بۆ کارێکی مۆدێرن. 💡🏛️",
+                    engwithme: "وەرە لەگەڵ من تا پێکەوە فێری نهێنییەکانی ئەندازیاری و کارە مەیدانییەکان ببین بە ئاسانی. 📐🏗️",
+                    masoud: "باشترین ڕێنمایی ئەندازیاری بۆ جێبەجێکردنی پڕۆژەکانت بە کوالێتییەکی بەرز و تێچوویەکی کەمتر. ✅💰",
+                    payana: "پلاتفۆرمێک بۆ گەشەپێدانی توانای گەنجانی ئەندازیار و باشترکردنی ئاستی زانیارییەکانیان لە بواری جێبەجێکردندا. 🚀📐",
+                    avrazz: "بەشداربە لە کۆرسەکانی فێربوونی بەرنامە ئەندازیارییەکان و شیکردنەوەی پڕۆژەکان بە شێوەی پراکتیکی. 🏢💻",
+                    alan: "زانیاری گرنگ و تایبەت لەسەر ئەندازیاری شارستانی و شیکردنەوەی کێشە تەکنیکییەکان لەگەڵ ئالان. 📏👷",
+                    alaa: "بابەتی ئەندازیاری و خوێندنەوەی نەخشەکان و زانیاری ورد لەسەر کەرەستە جیاوازەکانی بیناسازی. 🧱📊",
+                    srood: "باشترین زانیاری لەسەر جێبەجێکردنی پڕۆژەکان لە مەیداندا بۆ ئەندازیارانی نوێ و بەئەزموون. 🚧💪",
+                    civil: "هەموو زانیارییە گشتی و تایبەتەکان بە جیهانی ئەندازیاری شارستانی لێرە بەردەستە. 🌍🏗️"
+                }
+            },
+            ar: {
+                heroTitle: "الحسابات الرسمية والكورسات", igTitle: "حسابات إنستقرام الرسمية", follow: "متابعة", navSubs: "اشتراكات", navCourses: "كورسات", navHome: "الرئيسية", navIg: "إنستقرام", searchPh: "ابحث عن الحسابات والكورسات...", searchBtn: "بحث",
+                course1Title: "كورس تعلم AutoCAD", course2Title: "كورس برنامج ETABS", viewCourse: "عرض الكورس",
+                auto_t: "Autodesk All Apps", auto_s: "اشتراك سنوي (١ سنة)", ap: "15,000 IQD",
+                readMoreBtn: "المزيد من التفاصيل", backBtn: "رجوع", auto_title_page: "Autodesk All Apps - اشتراك رسمي", auto_feat_title: "مميزات الاشتراك:", contact_title: "للتواصل والطلب:",
+                auto_desc_long: "الآن يمكنك الحصول على اشتراك رسمي لجميع منتجات شركة أوتوديسك بأسهل طريقة وبسعر مناسب. يتم تفعيل هذا الاشتراك مباشرة على بريدك الإلكتروني الشخصي ولا توجد به أي مشاكل كراك أو فيروسات.",
+                af1: "اشتراك على الإيميل الشخصي (أكثر من ٤٦ برنامج).", af2: "بدون 'Crack' أو فيروسات، البرامج تعمل بضمان.",
+                af3: "يحتوي على كورسات رسمية مع شهادة (Certificate) مفيدة للـ CV.",
+                af4: "يمكنك إعادة التحميل بسهولة حتى بعد الفورمات.",
+                caps: {
+                    amran: "تعلم كيفية تحميل وتفعيل البرامج الهندسية 💻 والحصول على الكتب والمصادر العلمية المفيدة لمسيرتك المهنية بسهولة. 📚✨",
+                    andaz: "منصة هندسية متميزة تهدف لنشر المعرفة والخدمات الهندسية بأسلوب عصري ومحترف باللغة الكوردية. 🏗️🌟",
+                    dlvan: "تكنولوجيا البناء والتصاميم الحديثة مع المهندس دلڤان لتنفيذ مشاريع معاصرة وبأعلى معايير الجودة. 🏠🛠️",
+                    payam: "معلومات هندسية قيمة في الهندسة المدنية وإدارة المشاريع وكيفية التعامل مع التحديات في المواقع الإنشائية. 📊👷",
+                    muhammed: "تعلم البرامج الهندسية المتقدمة وتحليل المخططات بدقة عالية واحترافية مع المهندس محمد. 💻🏢",
+                    nadia: "الإبداع والتميز في عالم التصميم الهندسي والمعماري بلمسة فنية وتقنية من المهندسة نادية. ✨🎨",
+                    foreng: "مصدر شامل وغني بالمعلومات والمصادر الأكاديمية للطلاب والمهندسين في كافة التخصصات الهندسية. 🎓📖",
+                    yasr: "الخبرة الميدانية الواقعية في تنفيذ المشاريع الإنشائية وتغطية يومية لأعمال الموقع بشكل عملي. 🚧🛠️",
+                    zana: "الابتكار في عالم البناء والتشييد مع رؤية هندسية معاصرة وإبداعية متميزة مع المهندس زانا. 💡🏗️",
+                    engwithme: "انضم إلي لنتعلم أسرار الهندسة وكيفية تنفيذ المشاريع الهندسية بدقة متناهية على أرض الواقع. 📐🧱",
+                    masoud: "أفضل النصائح والإرشادات الهندسية لضمان تنفيذ مشاريعك بأعلى جودة وبأقل التكاليف الممكنة. ✅💰",
+                    payana: "منصة تهدف لتطوير مهارات المهندسين الشباب ورفع مستوى معرفتهم التقنية في سوق العمل. 🚀📐",
+                    avrazz: "شارك في دورات تعلم البرامج الهندسية وتحليل المشاريع الهندسية بطريقة عملية وعلمية مكثفة. 🏢💻",
+                    alan: "معلومات هندسية قيمة وتفاصيل دقيقة حول الهندسة المدنية والتنفيذ الميداني مع المهندس آلان. 📏👷‍♂️",
+                    alaa: "شرح المخططات الهندسية وتقديم معلومات دقيقة حول أنواع مواد البناء وكيفية استخدامها الصحيح. 🧱📈",
+                    srood: "أفضل النصائح العملية للمهندسين الجدد حول كيفية إدارة وتنفيذ المشاريع في الميدان بنجاح. 🚧💪",
+                    civil: "كل ما يخص الهندسة المدنية من نظريات وتطبيقات ومعلومات عامة تهم كل مهندس طموح. 🌍🏗️"
+                }
+            },
+            en: {
+                heroTitle: "Official Accounts & Courses", igTitle: "Official Instagram Accounts", follow: "Follow", navSubs: "Subscriptions", navCourses: "Courses", navHome: "Home", navIg: "Instagram", searchPh: "Search for accounts or courses...", searchBtn: "Search",
+                course1Title: "AutoCAD Masterclass", course2Title: "ETABS Structural Design", viewCourse: "View Course",
+                auto_t: "Autodesk All Apps", auto_s: "Annual Subscription (1 Year)", ap: "15,000 IQD",
+                readMoreBtn: "More Details", backBtn: "Back", auto_title_page: "Autodesk All Apps - Official Subscription", auto_feat_title: "Subscription Features:", contact_title: "For Contact & Ordering:",
+                auto_desc_long: "Now you can easily get an official subscription to all Autodesk products at an affordable price. This subscription is activated directly on your personal email, completely free from cracks or viruses.",
+                af1: "Subscription on personal email (over 46 apps).", af2: "No 'Crack' or viruses, works with warranty.",
+                af3: "Includes official courses with a Certificate good for CV.",
+                af4: "Easy to redownload even after formatting.",
+                caps: {
+                    amran: "Master the skills of downloading and activating engineering software 💻 alongside accessing premium scientific books and resources. 📚✨",
+                    andaz: "A leading modern platform for engineering insights and professional services provided in Kurdish. 🏗️✨",
+                    dlvan: "Explore advanced construction technology and modern architectural designs with Engineer Dlvan. 🏠🛠️",
+                    payam: "Essential practical civil engineering insights, project management, and site execution strategies. 📊👷‍♂️",
+                    muhammed: "Learn advanced engineering design software and detailed blueprint analysis with Engineer Muhammed. 💻🏢",
+                    nadia: "Innovation and creativity in architectural and civil engineering led by Engineer Nadia's expertise. ✨🏛️",
+                    foreng: "A comprehensive and rich resource for engineering students covering all academic and research needs. 🎓📚",
+                    yasr: "Practical on-site construction experience and daily professional execution insights from the field. 🚧🛠️",
+                    zana: "Engineering with a modern vision and innovation in the world of contemporary construction. 💡🏗️",
+                    engwithme: "Join me to uncover professional engineering secrets and learn easy on-site execution methods. 📐🧱",
+                    masoud: "Top-tier engineering advice and tips to ensure high-quality project execution with optimized costs. ✅💰",
+                    payana: "A platform dedicated to enhancing young engineers' technical skills and boosting their professional knowledge. 🚀📐",
+                    avrazz: "Join our professional courses to master engineering software and gain practical project experience. 🏢💻",
+                    alan: "Unique and practical civil engineering insights and technical execution tips with Engineer Alan. 📏👷‍♂️",
+                    alaa: "Detailed blueprint explanations and essential information about advanced construction materials. 🧱📈",
+                    srood: "The best practical advice on site management and technical problem-solving for engineers. 🚧💪",
+                    civil: "Everything related to the vast world of civil engineering, from theory to practical applications. 🌍🏗️"
+                }
+            }
+        };
+
+        let currentLang = 'ku_badini';
+
+        function renderProfiles() {
+            const grid = document.getElementById('accountsGrid');
+            grid.innerHTML = profiles.map(p => `
+                <div class="card" onclick="openProfileDetails('${p.id}', this)" style="cursor: pointer;">
+                    <div class="ig-profile-img"><img src="${p.img}"></div>
+                    <h3 style="direction: ltr; font-size: 1.1rem;">${p.user} <i class="fas fa-check-circle" style="color:#3897f0; font-size: 0.9rem;"></i></h3>
+                    <a href="https://www.instagram.com/${p.user}" target="_blank" class="btn ig-btn" style="display: none;">Follow</a>
+                </div>
+            `).join('');
+        }
+
+        function toggleLangDropdown(e) {
+            e.stopPropagation();
+            document.getElementById('langList').classList.toggle('active');
+        }
+
+        function changeLang(lang, event) {
+            if(event) event.preventDefault();
+            currentLang = lang;
+            document.body.dir = lang === 'en' ? 'ltr' : 'rtl';
+            
+            let flagSrc, langName;
+            if(lang === 'ar') { 
+                flagSrc = 'https://flagcdn.com/w20/sa.png'; 
+                langName = 'العربية'; 
+            } else if(lang === 'en') { 
+                flagSrc = 'https://flagcdn.com/w20/gb.png'; 
+                langName = 'English'; 
+            } else { 
+                flagSrc = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrcD2vuDdk-1jwnfYO6LUwsTZQ6_T2iEKB1kXfLf6hzhCdWqJWOdXi5D1kQMb4zosEeouBPAwK4OySvDc5NdFpIlXY2izzu_42alBoPwaN3NngnKQBbqeI7TvoW1vzgoXeoXj_EXWHFRpv6Wi2D6PavAhrVMQPuxMNXBfWOm647tM7F4vakfC4s0Hb5Ifg/s320/ChatGPT%20Image%20Mar%205,%202026,%2001_12_51%20PM.png'; 
+                langName = (lang === 'ku_badini' ? 'کوردی (بادینی)' : 'کوردی (سۆرانی)'); 
+            }
+
+            document.getElementById('currentLangFlag').src = flagSrc;
+            document.getElementById('langText').innerText = langName;
+            
+            // گوهۆڕینا ئاراستەیێ ئایکۆنا ڤەگەڕیانێ ل دویڤ زمانێ
+            const backIcon = document.getElementById('backIcon');
+            if(backIcon) {
+                backIcon.className = lang === 'en' ? 'fas fa-arrow-left' : 'fas fa-arrow-right';
+            }
+
+            document.querySelectorAll('[data-key]').forEach(el => {
+                if(translations[lang][el.dataset.key]) {
+                    el.innerText = translations[lang][el.dataset.key];
+                }
+            });
+            document.querySelectorAll('[data-key-ph]').forEach(el => {
+                if(translations[lang][el.dataset.keyPh]) {
+                    el.placeholder = translations[lang][el.dataset.keyPh];
+                }
+            });
+
+            document.getElementById('langList').classList.remove('active');
+        }
+
+        function toggleTheme() { 
+            const theme = document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            document.body.setAttribute('data-theme', theme);
+            document.getElementById('tIcon').className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        function goHome(e) {
+            if(e) e.preventDefault();
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchInput').dispatchEvent(new Event('input'));
+            closeAutodeskPage();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onclick = (e) => {
+            if (!e.target.closest('.lang-wrapper')) {
+                document.getElementById('langList').classList.remove('active');
+            }
+        };
+
+        // باشترکرنا سیستەمێ لێگەڕیانێ (کو تەنێ ئەکاونتێ لێگەڕیای دیار بکەت)
+        document.getElementById('searchInput').addEventListener('input', function() {
+            let filterText = this.value.toLowerCase();
+            document.querySelectorAll('.ig-accounts-grid .card, .subs-grid .card, .courses-grid .card').forEach(card => {
+                card.style.display = card.innerText.toLowerCase().includes(filterText) ? 'flex' : 'none';
+            });
+        });
+
+        function openProfileDetails(accountId, cardElement) {
+            const imgSrc = cardElement.querySelector('.ig-profile-img img').src;
+            const accountName = cardElement.querySelector('h3').innerText;
+            const accountLink = cardElement.querySelector('a.btn').href;
+            
+            const profileCaption = translations[currentLang].caps[accountId] || "زانیاری ل سەر ئەکاونتی ل ڤێرێ دێ دیار بن...";
+            const followText = translations[currentLang].follow;
+
+            document.getElementById('modalImgSrc').src = imgSrc;
+            document.getElementById('modalTitle').innerHTML = `${accountName} <i class="fas fa-check-circle" style="color:#3897f0; font-size:1.2rem;"></i>`;
+            document.getElementById('modalDesc').innerHTML = profileCaption;
+            document.getElementById('modalLink').href = accountLink;
+            document.getElementById('modalLink').innerHTML = `<i class="fab fa-instagram" style="font-size: 1.2rem;"></i> <span>${followText}</span>`;
+
+            document.getElementById('modalOverlay').style.display = 'flex';
+            setTimeout(() => { document.getElementById('modalBox').classList.add('active'); }, 10);
+        }
+
+        function closeModal() {
+            document.getElementById('modalBox').classList.remove('active');
+            setTimeout(() => { document.getElementById('modalOverlay').style.display = 'none'; }, 300);
+        }
+
+        // ڤەکرن و داخستنا پەڕەیا ئۆتۆدێسک
+        function openAutodeskPage() {
+            document.getElementById('main-page').style.display = 'none';
+            document.getElementById('autodesk-page').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeAutodeskPage() {
+            document.getElementById('autodesk-page').style.display = 'none';
+            document.getElementById('main-page').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        renderProfiles();
+        changeLang('ku_badini'); 
+    </script>
+</body>
+</html>
